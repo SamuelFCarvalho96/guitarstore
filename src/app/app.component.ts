@@ -17,10 +17,36 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'Login',
+      url: '/login',
+      icon: 'contact'
+    },
+    {
       title: 'Categorias',
-      url: '/list',
+      url: '/categorias',
       icon: 'list'
     },
+    {
+      title: 'Criar Conta',
+      url: '/criar-conta',
+      icon: 'person-add'
+    },
+    {
+      title: 'Esqueci minha senha',
+      url: '/esqueci-senha',
+      icon: 'sync'
+    },
+    {
+      title: 'Meus Pedidos',
+      url: '/pedidos',
+      icon: 'clipboard'
+    },
+    {
+      title: 'Meu Perfil',
+      url: '/perfil',
+      icon: 'person'
+    }
+
   ];
 
   constructor(

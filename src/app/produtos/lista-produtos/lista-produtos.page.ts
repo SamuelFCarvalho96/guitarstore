@@ -18,6 +18,8 @@ export class ListaProdutosPage implements OnInit {
               private produtosService: ProdutosService) { }
 
   ngOnInit() {
+    this.produtos = this.produtosService.getAll();
+    this.categorias = this.produtosService.getCategoriasAll();
   }
 
 }
