@@ -13,7 +13,7 @@
   <ion-list>
     <ion-item>
 
-      <ion-label>Categoria</ion-label>
+      <!-- <ion-label>Categoria</ion-label> -->
       <!-- <ion-select (ionChange)="buscarProdutos()" [(ngModel)]="categoriasSelecionada"> -->
         <ion-select-option value="" [selected]="true">Todas</ion-select-option>
         <ion-select-option *ngFor="let categoria of categorias | async" [value]="categoria.key">{{ categoria.nome }}
@@ -24,16 +24,16 @@
 
     <ion-item *ngFor="let produto of produtos | async">
       <ion-avatar slot="start" *ngIf="produto.img"> -->
-        <img [src]="produto.img" /> -->
-      </ion-avatar> -->
+        <img [src]="produto.img" />
+      </ion-avatar>
       <ion-label text-wrap>
-         <h1>{{ produto.nome }}</h1> -->
-        <h2>{{ produto.categoriaNome }}</h2> -->
-        <pre text-wrap>{{ produto.descricao }}</pre> -->
-        <!-- <span>{{ produto.preco | currency:'BRL' }}</span> --> -->
+         <h1>{{ produto.nome }}</h1>
+        <h2>{{ produto.categoriaNome }}</h2>
+        <pre text-wrap>{{ produto.descricao }}</pre>
+        <!-- <span>{{ produto.preco | currency:'BRL' }}</span> -->
         <!-- <app-valor [valor]="produto.preco"></app-valor> -->
       </ion-label>
-    </ion-item> -->
+    </ion-item>
   </ion-list>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="carrinhoPossuiItens">
