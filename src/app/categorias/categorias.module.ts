@@ -9,8 +9,24 @@ import { SharedModule } from '../core/shared/shared/shared.module';
 const routes: Routes = [
   {
     path: '',
-    component: CategoriasPage
-  }
+    component: CategoriasPage,
+    children: [
+      {
+        path: 'categorias',
+        loadChildren: '../categorias/categorias.module#CategoriasPageModule'
+      },
+      {
+        path: '',
+        redirectTo: '/categorias/categorias',
+        pathMatch: 'full'
+      }
+    ]
+  },
+//  // {
+//     path: '',
+//     redirectTo: '/tabs/produtos',
+//     pathMatch: 'full'
+//   }  
 ];
 
 @NgModule({

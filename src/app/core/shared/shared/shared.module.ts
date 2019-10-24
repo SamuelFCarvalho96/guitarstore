@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PrecoComponent } from '../preco/preco.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [PrecoComponent],
   imports: [
     CommonModule,
     IonicModule,
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     IonicModule,
     RouterModule,
     ReactiveFormsModule,
+    PrecoComponent
   ],
   entryComponents: []
 })
