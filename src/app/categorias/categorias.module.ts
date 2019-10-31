@@ -15,18 +15,18 @@ const routes: Routes = [
         path: 'categorias',
         loadChildren: '../categorias/categorias.module#CategoriasPageModule'
       },
-      {
-        path: '',
-        redirectTo: '/categorias/categorias',
-        pathMatch: 'full'
-      }
+      // {
+      //   path: '',
+      //   redirectTo: '/categorias/categorias',
+      //   pathMatch: 'full'
+      // }
     ]
   },
 //  // {
 //     path: '',
 //     redirectTo: '/tabs/produtos',
 //     pathMatch: 'full'
-//   }  
+//   }
 ];
 
 @NgModule({

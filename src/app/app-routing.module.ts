@@ -12,19 +12,34 @@ const routes: Routes = [
     loadChildren: () => import('./produtos/lista-produtos/lista-produtos.module').then(m => m.ListaProdutosPageModule)
   },
   { path: 'lista-produtos', loadChildren: './produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule' },
-  // { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' },
+
   {
     path: 'categorias',
     loadChildren: () => import('./categorias/categorias.module').then(m => m.CategoriasPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./Usuarios/login/login.module').then(m => m.LoginPageModule)
+  },
+  {
+    path: 'criar-conta',
+    loadChildren: () => import('./Usuarios/criar-conta/criar-conta.module').then(m => m.CriarContaPageModule)
+  },
+  {
+    path: 'esqueci-senha',
+    loadChildren: () => import('./Usuarios/esqueci-senha/esqueci-senha.module').then(m => m.EsqueciSenhaPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./Usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
+  },
 
-  { path: 'criar-conta', loadChildren: './criar-conta/criar-conta.module#CriarContaPageModule' },
-  { path: 'esqueci-senha', loadChildren: './esqueci-senha/esqueci-senha.module#EsqueciSenhaPageModule' },
+  // { path: 'criar-conta', loadChildren: './criar-conta/criar-conta.module#CriarContaPageModule' },
+  // { path: 'esqueci-senha', loadChildren: './esqueci-senha/esqueci-senha.module#EsqueciSenhaPageModule' },
   { path: 'pedidos', loadChildren: './pedidos/pedidos.module#PedidosPageModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
-  { path: 'criar-conta', loadChildren: './criar-conta/criar-conta.module#CriarContaPageModule' },
-  { path: 'valor', loadChildren: './core/shared/valor/valor.module#ValorPageModule' }
+  // { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  // { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  // { path: 'valor', loadChildren: './core/shared/valor/valor.module#ValorPageModule' }
 ];
 
 @NgModule({
