@@ -34,12 +34,12 @@ const routes: Routes = [
     loadChildren: () => import('./Usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
   },
 
-  // { path: 'criar-conta', loadChildren: './criar-conta/criar-conta.module#CriarContaPageModule' },
-  // { path: 'esqueci-senha', loadChildren: './esqueci-senha/esqueci-senha.module#EsqueciSenhaPageModule' },
   { path: 'pedidos', loadChildren: './pedidos/pedidos.module#PedidosPageModule' },
-  // { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  // { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
-  // { path: 'valor', loadChildren: './core/shared/valor/valor.module#ValorPageModule' }
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
+
+  { path: 'categoria-selecionada',
+    loadChildren: () => import('./categoria-selecionada/categoria-selecionada.module').then(m => m.CategoriaSelecionadaPageModule) },
+
 ];
 
 @NgModule({

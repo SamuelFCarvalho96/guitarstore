@@ -11,7 +11,7 @@ import { ProdutosService } from '../shared/produtos.service';
 export class ListaProdutosPage implements OnInit {
   produtos: Observable<any[]>;
   categorias: Observable<any[]>;
-  categoriasSelecionada: string;
+  categoriaSelecionada: string;
   carrinhoPossuiItens: boolean = false;
 
   constructor(private router: Router,
@@ -20,6 +20,14 @@ export class ListaProdutosPage implements OnInit {
   ngOnInit() {
     this.produtos = this.produtosService.getAll();
     this.categorias = this.produtosService.getCategoriasAll();
+  }
+
+  buscarProdutos() {
+    this.produtos = this.produtosService.getAll(this.categoriaSelecionada);
+  }
+
+  adicionarProduto(produtoKey: string) {
+    this.router.navigate(['pedido/carrinho/novo-item', produtoKey]);
   }
 
 }

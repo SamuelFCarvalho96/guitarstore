@@ -3,12 +3,12 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { ProdutosService } from '../produtos/shared/produtos.service';
 
-@Component({
-  selector: 'app-categorias',
-  templateUrl: './categorias.page.html',
-  styleUrls: ['./categorias.page.scss'],
+@ Component({
+  selector: 'app-categoria-selecionada',
+  templateUrl: './categoria-selecionada.page.html',
+  styleUrls: ['./categoria-selecionada.page.scss'],
 })
-export class CategoriasPage implements OnInit {
+export class CategoriaSelecionadaPage implements OnInit {
   produtos: Observable<any[]>;
   categorias: Observable<any[]>;
   categoriaEscolhida: string;
@@ -23,6 +23,7 @@ export class CategoriasPage implements OnInit {
 
   buscarProdutos(categoriaKey: string) {
     this.produtos = this.produtosService.getAll(this.categoriaEscolhida);
+    this.router.navigate(['produtos/lista-produtos', categoriaKey]);
   }
 
 }
