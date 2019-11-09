@@ -1,20 +1,4 @@
-<ion-header>
-  <ion-toolbar color="warning">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Categorias
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-select (ionChange)="buscarProdutos()" [(ngModel)]="categoriaEscolhida">
-      <ion-item *ngFor="let categoria of categorias | async" (click)="categoria.key">{{ categoria.nome }}>
-      </ion-item>
-</ion-select>
-<!-- <ion-item *ngFor="let categoria of categorias | async" (click)="categoria.key">{{ categoria.nome }}> -->
-<!-- </ion-item> -->
 <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="schedule">

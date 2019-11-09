@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CategoriaSelecionadaPage } from './categoria-selecionada.page';
+import { TabBaixosPage } from './tab-baixos.page';
 
-describe('CategoriaSelecionadaPage', () => {
-  let component: CategoriaSelecionadaPage;
-  let fixture: ComponentFixture<CategoriaSelecionadaPage>;
+describe('TabBaixosPage', () => {
+  let component: TabBaixosPage;
+  let fixture: ComponentFixture<TabBaixosPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CategoriaSelecionadaPage ],
+      declarations: [ TabBaixosPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CategoriaSelecionadaPage);
+    fixture = TestBed.createComponent(TabBaixosPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -33,13 +33,9 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./Usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
   },
-
-  { path: 'pedidos', loadChildren: './pedidos/pedidos.module#PedidosPageModule' },
-  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
-
-  { path: 'categoria-selecionada',
-    loadChildren: () => import('./categoria-selecionada/categoria-selecionada.module').then(m => m.CategoriaSelecionadaPageModule) },
-
+  { path: 'tab-violao', loadChildren: './tab-violao/tab-violao.module#TabViolaoPageModule' },
+  { path: 'tab-guitarras', loadChildren: './tab-guitarras/tab-guitarras.module#TabGuitarrasPageModule' },
+  { path: 'tab-baixos', loadChildren: './tab-baixos/tab-baixos.module#TabBaixosPageModule' },
 ];
 
 @NgModule({
