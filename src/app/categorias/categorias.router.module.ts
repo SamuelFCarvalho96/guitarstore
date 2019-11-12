@@ -1,18 +1,17 @@
-import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 
-import { CategoriasPage } from './categorias.page';
+const routes: Routes = []
+
+
+
+
+
+
 
 @NgModule({
-  imports: [
-    IonicModule,
-    CommonModule,
-    FormsModule,
-    CategoriasPageRoutingModule
-  ],
-  declarations: [CategoriasPage]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class TabsPageModule {}
+export class CategoriasPageRoutingModule {}

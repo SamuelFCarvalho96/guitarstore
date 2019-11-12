@@ -1,3 +1,4 @@
+import { CategoriasPageRoutingModule } from './categorias.router.module';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,7 @@ import { CategoriasPage } from './categorias.page';
     FormsModule,
     IonicModule,
     FormsModule,
-    Ca
+    CategoriasPageRoutingModule
   ],
   declarations: [CategoriasPage]
 })
