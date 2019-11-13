@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CategoriasPage } from './categorias.page';
 
-
-const routes: Routes = []
-
-
-
-
+const routes: Routes = [
+    {
+      path: 'categorias',
+      component: CategoriasPage,
+      children: [
+        {
+          path: '',
+          loadChildren: '../categorias/categorias.module#CategoriasPage'
+        }
+      ]
+    }
+]
 
 
 
