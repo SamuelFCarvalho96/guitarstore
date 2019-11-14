@@ -4,16 +4,39 @@ import { CategoriasPage } from './categorias.page';
 
 const routes: Routes = [
     {
-      path: 'categorias',
+      path: '',
       component: CategoriasPage,
       children: [
         {
-          path: '',
-          loadChildren: '../categorias/categorias.module#CategoriasPage'
-        }
+          path: 'tab-violao',
+          children: [
+            {
+              path: '', loadChildren: () =>
+               import ('../tab-violao/tab-violao.module').then(m => m.TabViolaoPageModule)
+            }
+          ]
+        },
+        {
+          path: 'tab-guitarras',
+          children: [
+            {
+              path: '', loadChildren: () =>
+               import ('../tab-guitarras/tab-guitarras.module').then(m => m.TabGuitarrasPageModule)
+            }
+          ]
+        },
+        {
+          path: 'tab-baixos',
+          children: [
+            {
+              path: '', loadChildren: () =>
+               import ('../tab-baixos/tab-baixos.module').then(m => m.TabBaixosPageModule)
+            }
+          ]
+        },
       ]
     }
-]
+];
 
 
 

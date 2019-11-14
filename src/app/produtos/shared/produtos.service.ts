@@ -36,6 +36,8 @@ export class ProdutosService {
     );
   }
 
+  // Trazer um produto pela chave
+
   getByKey(key: string) {
     const path = `${FirebasePath.PRODUTOS}${key}`;
     return this.db.object(path).snapshotChanges().pipe(
@@ -44,4 +46,35 @@ export class ProdutosService {
       })
     );
   }
+
+  // Trazer todos os produtos que estão na categoria selecionada
+
+  // getAllCategoriaSelecionada(key: string) {
+  //   const path = `${FirebasePath.CATEGORIAS}${key}`;
+  //   return this.db.object(path).snapshotChanges().pipe(
+  //     map (change => {
+  //       return ({ key: change.key, ...change.payload.val()});
+  //     })
+  //   );
+  // }
+
+
+  getAllCategoriaSelecionada(categoria: string = null) {
+    return this.db.list(FirebasePath.PRODUTOS, q => {
+      if (categoria) {
+        return q.orderByChild('categoriaNome').equalTo(categoria);
+      }
+    }).snapshotChanges().pipe(
+      map(changes => {
+        return changes.map(m => ({key: m.payload.key, ...m.payload.val()}));
+      })
+    );
+  }
+
+
+
+
+
+
+
 }
