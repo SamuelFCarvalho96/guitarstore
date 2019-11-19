@@ -34,6 +34,11 @@ const routes: Routes = [
             }
           ]
         },
+        {
+          path: '',
+          redirectTo: '/categorias/tab-violao',
+          pathMatch: 'full'
+        }
       ]
     }
 ];

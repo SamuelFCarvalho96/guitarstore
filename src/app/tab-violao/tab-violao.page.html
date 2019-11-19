@@ -1,9 +1,27 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tabViolao</ion-title>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Violões
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <ion-list>
+
+    <ion-item *ngFor="let produto of produtos | async">
+        <ion-avatar slot="start" *ngIf="produto.img"> -->
+          <img [src]="produto.img" />
+        </ion-avatar>
+        <ion-label text-wrap>
+           <h1>{{ produto.nome }}</h1>
+          <h2>{{ produto.categoriaNome }}</h2>
+          <pre text-wrap>{{ produto.descricao }}</pre>
+        </ion-label>
+      </ion-item>
+    </ion-list>
 
 </ion-content>

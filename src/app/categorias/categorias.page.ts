@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 export class CategoriasPage {
   categoria: string = 'Violões';
   categoriaSelecionada: Observable<any[]>;
+  produtos: string;
 
 
   constructor(private router: Router,

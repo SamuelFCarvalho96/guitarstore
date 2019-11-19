@@ -17,7 +17,6 @@ const routes: Routes = [
     path: 'categorias',
     loadChildren: () => import('./categorias/categorias.module').then(m => m.CategoriasPageModule)
   },
-  // { path: 'categorias' , loadChildren: './categorias/categorias.module#CategoriasPageModule'},
   {
     path: 'login',
     loadChildren: () => import('./Usuarios/login/login.module').then(m => m.LoginPageModule)
@@ -34,6 +33,7 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./Usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
   },
+
   // { path: 'tab-violao', loadChildren: './tab-violao/tab-violao.module#TabViolaoPageModule' },
   // { path: 'tab-guitarras', loadChildren: './tab-guitarras/tab-guitarras.module#TabGuitarrasPageModule' },
   // { path: 'tab-baixos', loadChildren: './tab-baixos/tab-baixos.module#TabBaixosPageModule' },

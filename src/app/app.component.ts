@@ -45,7 +45,12 @@ export class AppComponent {
       title: 'Meu Perfil',
       url: '/perfil',
       icon: 'person'
-    }
+    },
+    {
+      title: 'Meu Carrinho',
+      url: '/carrinho',
+      icon: 'person'
+    },
 
   ];
 
