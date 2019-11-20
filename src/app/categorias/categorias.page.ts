@@ -11,14 +11,14 @@ import { Observable } from 'rxjs';
 export class CategoriasPage {
   categoria: string = 'Violões';
   categoriaSelecionada: Observable<any[]>;
-  produtos: string;
+  p: Observable<any[]>;
 
 
   constructor(private router: Router,
               private produtosService: ProdutosService) { }
 
 
-ngOnInit() {
+ ngOnInit() {
   this.categoriaSelecionada = this.produtosService.getAllCategoriaSelecionada(this.categoria);
-}
+ }
 }
