@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { ProdutosService } from '../produtos/shared/produtos.service';
-import { FirebasePath } from '../core/shared/firebase-path';
 import { map } from 'rxjs/operators';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { FirebasePath } from '../core/shared/firebase-path';
 
 @ Component({
   selector: 'app-tab-violao',
@@ -12,7 +12,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
   styleUrls: ['./tab-violao.page.scss'],
 })
 export class TabViolaoPage implements OnInit {
-  produtos: Observable<any[]>;
+  p: Observable<any[]>;
   // categorias: Observable<any[]>;
   // produtosService: any;
   // categoriaSelecionada: Observable<any[]>;

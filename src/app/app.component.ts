@@ -51,6 +51,7 @@ export class AppComponent {
       url: '/carrinho',
       icon: 'person'
     },
+    
 
   ];
 

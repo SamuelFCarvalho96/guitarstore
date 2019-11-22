@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'lista-produtos', loadChildren: './produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule' },
 
   {
-    path: 'categorias',
+    path: 'categorias', 
     loadChildren: () => import('./categorias/categorias.module').then(m => m.CategoriasPageModule)
   },
   {
@@ -33,6 +33,12 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./Usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
   },
+  { path: 'form-endereco',
+    loadChildren: () => import('./endereco/form-endereco/form-endereco.module').then(m => m.FormEnderecoPageModule)
+  },
+  { path: 'lista-endereco',
+    loadChildren: () => import('./endereco/lista-endereco/lista-endereco.module').then(m => m.ListaEnderecoPageModule) 
+  }
 
   // { path: 'tab-violao', loadChildren: './tab-violao/tab-violao.module#TabViolaoPageModule' },
   // { path: 'tab-guitarras', loadChildren: './tab-guitarras/tab-guitarras.module#TabGuitarrasPageModule' },
