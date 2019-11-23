@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PerfilPage } from './perfil.page';
-
-import { IonicModule } from '@ionic/angular';
+import { FormItemPedidoPage } from './form-item-pedido.page';
+import { SharedModule } from 'src/app/core/shared/shared/shared.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: PerfilPage
+    component: FormItemPedidoPage
   }
 ];
 
@@ -18,9 +17,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PerfilPage]
+  declarations: [FormItemPedidoPage]
 })
-export class PerfilPageModule {}
+export class FormItemPedidoPageModule {}

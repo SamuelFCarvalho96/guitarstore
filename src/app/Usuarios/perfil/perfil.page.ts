@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class PerfilPage implements OnInit {
   usuario: any = {};
-
   constructor(private usuariosService: UsuariosService,
               private router: Router) { }
 

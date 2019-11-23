@@ -12,7 +12,7 @@ import { FirebasePath } from '../core/shared/firebase-path';
   styleUrls: ['./tab-violao.page.scss'],
 })
 export class TabViolaoPage implements OnInit {
-  p: Observable<any[]>;
+  produtos: Observable<any[]>;
   // categorias: Observable<any[]>;
   // produtosService: any;
   // categoriaSelecionada: Observable<any[]>;

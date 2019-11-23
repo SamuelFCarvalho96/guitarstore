@@ -14,7 +14,7 @@
     <ion-item>
 
       <ion-label>Principais Ofertas</ion-label>
-      <!-- <ion-select (ionChange)="buscarProdutos()" [(ngModel)]="categoriasSelecionada"> -->
+      <!-- <ion-select (ionChange)="buscarProdutos()" [(ngModel)]="categoriaSelecionada"> -->
         <ion-select-option value="" [selected]="true">Todas</ion-select-option>
         <ion-select-option *ngFor="let categoria of categorias | async" [value]="categoria.key">{{ categoria.nome }}
         </ion-select-option>
@@ -22,7 +22,7 @@
 
     </ion-item>
 
-    <ion-item *ngFor="let produto of produtos | async">
+    <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
       <ion-avatar slot="start" *ngIf="produto.img"> -->
         <img [src]="produto.img" />
       </ion-avatar>

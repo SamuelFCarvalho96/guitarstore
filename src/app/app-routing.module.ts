@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'lista-produtos', loadChildren: './produtos/lista-produtos/lista-produtos.module#ListaProdutosPageModule' },
 
   {
-    path: 'categorias', 
+    path: 'categorias',
     loadChildren: () => import('./categorias/categorias.module').then(m => m.CategoriasPageModule)
   },
   {
@@ -33,16 +33,29 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./Usuarios/perfil/perfil.module').then(m => m.PerfilPageModule)
   },
+  { path: 'form-item-pedido', loadChildren: './pedidos/form-item-pedido/form-item-pedido.module#FormItemPedidoPageModule' },
+
   { path: 'form-endereco',
     loadChildren: () => import('./endereco/form-endereco/form-endereco.module').then(m => m.FormEnderecoPageModule)
   },
   { path: 'lista-endereco',
-    loadChildren: () => import('./endereco/lista-endereco/lista-endereco.module').then(m => m.ListaEnderecoPageModule) 
-  }
-
-  // { path: 'tab-violao', loadChildren: './tab-violao/tab-violao.module#TabViolaoPageModule' },
-  // { path: 'tab-guitarras', loadChildren: './tab-guitarras/tab-guitarras.module#TabGuitarrasPageModule' },
-  // { path: 'tab-baixos', loadChildren: './tab-baixos/tab-baixos.module#TabBaixosPageModule' },
+    loadChildren: () => import('./endereco/lista-endereco/lista-endereco.module').then(m => m.ListaEnderecoPageModule)
+  },
+  { path: 'enderecos',
+    loadChildren: () => import ('./endereco/lista-endereco/lista-endereco.module').then(m => m.ListaEnderecoPageModule)
+  },
+  { path: 'enderecos/novo',
+    loadChildren: () => import ('./endereco/form-endereco/form-endereco.module').then(m => m.FormEnderecoPageModule)
+  },
+  { path: 'enderecos/editar/:key',
+    loadChildren: () => import ('./endereco/form-endereco/form-endereco.module').then(m => m.FormEnderecoPageModule)
+  },
+  { path: 'carrinho/novo-item/:key',
+    loadChildren: () => import ('./pedidos/form-item-pedido/form-item-pedido.module').then(m => m.FormItemPedidoPageModule)
+  },
+  // { path: 'carrinho',
+  //   loadChildren: () => import ('./pedidos/')
+  // },
 ];
 
 @NgModule({

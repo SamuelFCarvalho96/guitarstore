@@ -41,28 +41,32 @@ const routes: Routes = [
         }
       ]
     },
-    {
-      path: 'usuarios',
-      children: [
-        {
-          path: 'enderecos',
-          loadChildren: '../endereco/lista-endereco/lista-endereco.module#ListaEnderecoPageModule'
-        },
-        {
-          path: 'enderecos/novo',
-          loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
-        },
-        {
-          path: 'enderecos/editar/:key',
-          loadChildren: '../enderecos/form-endereco/form-endereco.module#FormEnderecoPageModule'
-        }
-      ]
-    },
-    {
-      path: '',
-      redirectTo: '/perfil/..',
-      pathMatch: 'full'
-    }
+    // {
+    //   path: 'pedido',
+    //   children: [
+    //     {
+    //       path: 'carrinho/novo-item/:key',
+    //       loadChildren: '../pedidos/form-item-pedido/form-item-pedido.module#FormItemPedidoPageModule'
+    //     },
+    //     {
+    //       path: 'carrinho',
+    //       loadChildren: '../pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule'
+    //     },
+    //     {
+    //       path: 'forma-pagamento',
+    //       loadChildren: '../pedidos/form-pagamento/form-pagamento.module#FormPagamentoPageModule'
+    //     },
+    //     {
+    //       path: 'produtos/:key',
+    //       loadChildren: '../pedidos/lista-produto-pedido/lista-produto-pedido.module#ListaProdutoPedidoPageModule'
+    //     }
+    //   ]
+    // },
+    // {
+    //   path: '',
+    //   redirectTo: '/categorias/tab-violao',
+    //   pathMatch: 'full'
+    // }
 ];
 
 
