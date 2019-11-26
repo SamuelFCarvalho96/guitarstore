@@ -53,9 +53,11 @@ const routes: Routes = [
   { path: 'carrinho/novo-item/:key',
     loadChildren: () => import ('./pedidos/form-item-pedido/form-item-pedido.module').then(m => m.FormItemPedidoPageModule)
   },
-  // { path: 'carrinho',
-  //   loadChildren: () => import ('./pedidos/')
-  // },
+  { path: 'lista-item-pedido', loadChildren: './pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule' },
+
+  { path: 'carrinho',
+    loadChildren: () => import ('./pedidos/lista-item-pedido/lista-item-pedido.module').then(m => m.ListaItemPedidoPageModule)
+  },
 ];
 
 @NgModule({

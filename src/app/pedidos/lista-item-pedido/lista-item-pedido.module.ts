@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-import { FormEnderecoPage } from './form-endereco.page';
+import { ListaItemPedidoPage } from './lista-item-pedido.page';
 import { SharedModule } from 'src/app/core/shared/shared/shared.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: FormEnderecoPage
+    component: ListaItemPedidoPage
   }
 ];
 
@@ -20,6 +20,6 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [FormEnderecoPage]
+  declarations: [ListaItemPedidoPage]
 })
-export class FormEnderecoPageModule {}
+export class ListaItemPedidoPageModule {}

@@ -11,12 +11,12 @@
   <form [formGroup]="formEndereco" (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label position="stacked">CEP</ion-label>
-      <ion-input type="number" formControlName="cep" placeholder="Somente números"></ion-input>
+      <ion-input type="number" formControlName="cep" placeholder="(Somente números)"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Logradouro</ion-label>
-      <ion-input type="text" formControlName="logradouro"></ion-input>
+      <ion-input type="text" formControlName="logradouro" placeholder="(Opcional)"></ion-input>
     </ion-item>
 
     <ion-item>
