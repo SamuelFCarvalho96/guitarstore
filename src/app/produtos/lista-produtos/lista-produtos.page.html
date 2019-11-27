@@ -11,7 +11,8 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item>
+    <ion-item>   
+      <!-- Inserir cor na Page na linha 14 dentro do ion-item -->
 
       <ion-label>Principais Ofertas</ion-label>
       <!-- <ion-select (ionChange)="buscarProdutos()" [(ngModel)]="categoriaSelecionada"> -->
@@ -23,17 +24,32 @@
     </ion-item>
 
     <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
-      <ion-avatar slot="start" *ngIf="produto.img"> -->
+
+    <ion-card>
+      <ion-card-header>
+        <img [src]="produto.img" />
+        <ion-card-title><h1>{{ produto.nome }}</h1></ion-card-title>
+        <ion-card-subtitle><h2>{{ produto.categoriaNome }}</h2>
+        <pre text-wrap>{{ produto.descricao }}
+          <app-preco [preco]="produto.preco"></app-preco>
+        </pre></ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    </ion-item>
+
+
+    <!-- <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)">
+      <ion-avatar slot="start" *ngIf="produto.img">
         <img [src]="produto.img" />
       </ion-avatar>
       <ion-label text-wrap>
          <h1>{{ produto.nome }}</h1>
         <h2>{{ produto.categoriaNome }}</h2>
         <pre text-wrap>{{ produto.descricao }}</pre>
-        <!-- <span>{{ produto.preco | currency:'BRL' }}</span> -->
+        <span>{{ produto.preco | currency:'BRL' }}</span>
         <app-preco [preco]="produto.preco"></app-preco>
-      </ion-label>
-    </ion-item>
+      </ion-label> -->
+    
   </ion-list>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="carrinhoPossuiItens">
