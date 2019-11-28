@@ -39,17 +39,17 @@ export class ListaEnderecoPage implements OnInit {
   }
 
   editar(key: string) {
-    this.router.navigate(['/usuarios/enderecos/editar', key]);
+    this.router.navigate(['enderecos/editar', key]);
   }
 
-  // remover(endereco: any) {
-  //   this.alert.ShowConfirmaExclusao(endereco.logradouro + ', ' + endereco.numero, () => {
-  //     this.enderecoService.remove(endereco.key)
-  //     .then( () => {
-  //       this.toast.show('Endereço removido com sucesso');
-  //     });
-  //   });
-  // }
+  remover(endereco: any) {
+    this.alert.ConfirmacaoExclusao(endereco.logradouro + ', ' + endereco.numero, () => {
+      this.enderecoService.remover(endereco.key)
+      .then( () => {
+        this.toast.show('Endereço removido com sucesso');
+      });
+    });
+  }
 
   setEnderecoSelecionado(endereco: any) {
     if (this.selecionarEndereco) {

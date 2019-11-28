@@ -23,16 +23,16 @@
             <ion-item-option color="secondary" (click)="editar(endereco.key)">
               <ion-icon name="create"></ion-icon>
             </ion-item-option>
-            <!-- <ion-item-option color="danger" (click)="remover(endereco)"> -->
+            <ion-item-option color="danger" (click)="remover(endereco)">
               <ion-icon name="trash"></ion-icon>
-            <!-- </ion-item-option> -->
+            </ion-item-option>
           </ion-item-options>
           
         </ion-item-sliding>
       </ion-list>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button color="warning" [routerLink]="['/enderecos/novo']">
+        <ion-fab-button color="success" [routerLink]="['/enderecos/novo']">
           <ion-icon name="add"></ion-icon>
         </ion-fab-button>
       </ion-fab>
