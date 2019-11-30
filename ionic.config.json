@@ -1,5 +1,7 @@
 {
   "name": "guitarshop",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
