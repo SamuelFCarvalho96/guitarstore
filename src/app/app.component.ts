@@ -14,7 +14,7 @@ export class AppComponent {
     {
       title: 'Guitar Shop',
       url: '/home',
-      icon: 'contact'
+      icon: 'contact',
     },
     {
       title: 'Login',

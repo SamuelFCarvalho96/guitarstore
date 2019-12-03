@@ -1,23 +1,23 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="laranja">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title color="light">
       Esqueci minha Senha
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding color="dark">
   <form [formGroup]="formEsqueciMinhaSenha" (ngSubmit)="onSubmit()">
-    <ion-item>
+    <ion-item color="dark">
       <ion-label position="stacked">E-mail</ion-label>
       <ion-input type="email" formControlName="email"></ion-input>
     </ion-item>
 
     <div padding>
-      <ion-button color="primary" expand="block" type="submit">Resetar minha senha</ion-button>
+      <ion-button color="medium" expand="block" type="submit">Resetar minha senha</ion-button>
     </div>
   </form>
 </ion-content>

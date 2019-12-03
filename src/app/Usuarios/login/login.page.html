@@ -1,28 +1,28 @@
 <ion-header>
-  <ion-toolbar color="black">
+  <ion-toolbar color="laranja">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title color ="light">
       Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding color ="dark">
    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
-    <ion-item>
+    <ion-item color ="dark">
       <ion-label position="stacked">E-mail</ion-label>
       <ion-input type="email" formControlName="email"></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item color ="dark">
       <ion-label position="stacked">Senha</ion-label>
       <ion-input type="password" formControlName="senha"></ion-input>
     </ion-item>
 
     <div margin-vertical>
-      <ion-button color="primary" expand="block" type="submit">Entrar</ion-button>
+      <ion-button color="medium" expand="block" type="submit">Entrar</ion-button>
     </div>
   </form>
 

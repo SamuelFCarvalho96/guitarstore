@@ -1,24 +1,33 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="laranja">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button color ="light"></ion-menu-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title color ="light">
       Perfil
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding color ="dark">
     <ion-list>
-        <ion-item>
-          <ion-label>{{ usuario.name }}</ion-label>
+        <ion-item color ="dark">
+          <ion-label>  {{ usuario.name }}</ion-label>
         </ion-item>
-        <ion-item>
-          <ion-label>{{ usuario.email }}</ion-label>
+        <ion-item color ="dark">
+          <ion-label >{{ usuario.email }}</ion-label>
         </ion-item>
       </ion-list>
-      <ion-button expand="block" color="success" [routerLink]="['/enderecos']">Meus Endereços</ion-button>
-      <ion-button expand="block" color="danger" (click)="deslogar()">Sair</ion-button>
+
+
+      <!-- <ion-button expand="block" color="success" [routerLink]="['/enderecos']">Meus Endereços</ion-button>
+
+
+      <ion-button expand="block" color="danger" (click)="deslogar()">Sair</ion-button> -->
 
 </ion-content>
+
+<ion-button expand="block" color="success" [routerLink]="['/enderecos']">Meus Endereços</ion-button>
+
+
+      <ion-button expand="block" color="danger" (click)="deslogar()">Sair</ion-button>
