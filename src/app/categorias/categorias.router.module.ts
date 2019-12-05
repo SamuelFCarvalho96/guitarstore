@@ -62,11 +62,11 @@ const routes: Routes = [
     //     }
     //   ]
     // },
-    // {
-    //   path: '',
-    //   redirectTo: '/categorias/tab-violao',
-    //   pathMatch: 'full'
-    // }
+    {
+      path: '',
+      redirectTo: '/categorias/tab-violao',
+      pathMatch: 'full'
+    }
 ];
 
 

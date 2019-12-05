@@ -27,7 +27,7 @@ export class ListaProdutosPage implements OnInit {
   }
 
   adicionarProduto(produtoKey: string) {
-    this.router.navigate(['/pedidos/carrinho/novo-item', produtoKey]);
+    this.router.navigate(['/carrinho/novo-item', produtoKey]);
   }
 
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="laranja">
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-menu-button color ="light"></ion-menu-button>
     </ion-buttons>
@@ -9,12 +9,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding color ="dark">
+<ion-content padding color ="cinza">
     <ion-list>
-        <ion-item color ="dark">
+        <ion-item color ="cinza">
           <ion-label>  {{ usuario.name }}</ion-label>
         </ion-item>
-        <ion-item color ="dark">
+        <ion-item color ="cinza">
           <ion-label >{{ usuario.email }}</ion-label>
         </ion-item>
       </ion-list>
@@ -27,7 +27,7 @@
 
 </ion-content>
 
-<ion-button expand="block" color="success" [routerLink]="['/enderecos']">Meus Endereços</ion-button>
+<ion-button expand="block" color="dark" [routerLink]="['/enderecos']">Meus Endereços</ion-button>
 
 
-      <ion-button expand="block" color="danger" (click)="deslogar()">Sair</ion-button>
+      <ion-button expand="block" color="dark" (click)="deslogar()">Sair</ion-button>

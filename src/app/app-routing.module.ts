@@ -50,15 +50,15 @@ const routes: Routes = [
   { path: 'enderecos/editar/:key',
     loadChildren: () => import ('./endereco/form-endereco/form-endereco.module').then(m => m.FormEnderecoPageModule)
   },
-  { path: 'carrinho/novo-item/:key',
-    loadChildren: () => import ('./pedidos/form-item-pedido/form-item-pedido.module').then(m => m.FormItemPedidoPageModule)
-  },
-  // { path: 'lista-item-pedido',
-  //   loadChildren: './pedidos/lista-item-pedido/lista-item-pedido.module#ListaItemPedidoPageModule' },
-
   { path: 'carrinho',
     loadChildren: () => import ('./pedidos/lista-item-pedido/lista-item-pedido.module').then(m => m.ListaItemPedidoPageModule)
   },
+  { path: 'carrinho/novo-item/:key',
+    loadChildren: () => import ('./pedidos/form-item-pedido/form-item-pedido.module').then(m => m.FormItemPedidoPageModule)
+  },
+  // { path: 'enderecos/editar/:key',
+  //   loadChildren: () => import ('./endereco/form-endereco/form-endereco.module').then(m => m.FormEnderecoPageModule)
+  // },
 ];
 
 @NgModule({

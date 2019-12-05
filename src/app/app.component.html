@@ -6,10 +6,10 @@
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content color ="dark">
-        <ion-list color ="dark">
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages" color ="dark">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" color ="dark">
+      <ion-content color ="cinza">
+        <ion-list color ="cinza">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages" color ="cinza">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" color ="cinza">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
                 {{p.title}}
