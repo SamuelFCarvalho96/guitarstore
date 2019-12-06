@@ -1,15 +1,17 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Produtos do pedido</ion-title>
+    <ion-title>
+      Produtos do Pedido
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding color= "cinza">
   <ion-list>
-    <ion-item *ngFor="let produto of produtos | async">
+    <ion-item *ngFor="let produto of produtos | async" color= "cinza">
       <ion-label>
 
         <ion-grid>
