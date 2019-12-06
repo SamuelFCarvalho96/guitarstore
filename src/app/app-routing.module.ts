@@ -56,9 +56,21 @@ const routes: Routes = [
   { path: 'carrinho/novo-item/:key',
     loadChildren: () => import ('./pedidos/form-item-pedido/form-item-pedido.module').then(m => m.FormItemPedidoPageModule)
   },
-  // { path: 'enderecos/editar/:key',
-  //   loadChildren: () => import ('./endereco/form-endereco/form-endereco.module').then(m => m.FormEnderecoPageModule)
-  // },
+  { path: 'form-pagamento',
+    loadChildren: () => import ('./pedidos/form-pagamento/form-pagamento.module').then(m => m.FormPagamentoPageModule)
+  },
+  { path: 'form-pagamento',
+    loadChildren: () => import ('./pedidos/form-pagamento/form-pagamento.module').then(m => m.FormPagamentoPageModule)
+  },
+  { path: 'lista-pedido',
+    loadChildren: () => import ('./pedidos/lista-pedido/lista-pedido.module').then(m => m.ListaPedidoPageModule)
+  },
+  { path: 'lista-produto-pedido',
+    loadChildren: () => import ('./pedidos/lista-produto-pedido/lista-produto-pedido.module').then(m => m.ListaProdutoPedidoPageModule)
+  },
+  { path: 'produtos/:key',
+    loadChildren: () => import ('./pedidos/lista-produto-pedido/lista-produto-pedido.module').then(m => m.ListaProdutoPedidoPageModule)
+  }
 ];
 
 @NgModule({

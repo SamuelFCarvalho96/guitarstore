@@ -38,7 +38,7 @@ export class AppComponent {
     },
     {
       title: 'Meus Pedidos',
-      url: '/pedidos',
+      url: '/lista-pedido',
       icon: 'clipboard'
     },
     {

@@ -1,3 +1,4 @@
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -18,7 +19,8 @@ export class FormItemPedidoPage implements OnInit {
   constructor(private formBuilder: FormBuilder, private route: ActivatedRoute,
               private router: Router, private produtosService: ProdutosService,
               private carrinhoService: CarrinhoService,
-              private toast: ToastService) { }
+              private toast: ToastService,
+              private afAuth: AngularFireAuth) { }
 
 ngOnInit() {
   this.criarFormulario();
@@ -77,15 +79,23 @@ ngOnInit() {
    this.form.patchValue({quantidade: quantidade, total: this.total});
  }
 
+
  onSubmit() {
-   if (this.form.valid) {
-     this.carrinhoService.insert(this.form.value)
-     .then(() => {
-       this.toast.show('Produto adicionado ao seu carrinho');
-       this.router.navigate(['/categorias/produtos']);
-     });
-   }
- }
+  this.afAuth.auth.onAuthStateChanged(user => {
+    if (!user) {
+      this.toast.show('É necessário efetuar Login ou Criar uma conta !!!');
+      this.router.navigate(['/login'])
+    } else {
+      if (this.form.valid) {
+        this.carrinhoService.insert(this.form.value)
+          .then(() => {
+            this.toast.show('Produto adicionado com sucesso !!!');
+            this.router.navigate(['/home']);
+          });
+      }
+    }
+  });
+}
 
 
 }
