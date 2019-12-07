@@ -21,11 +21,11 @@ export class AppComponent {
       url: '/login',
       icon: 'contact'
     },
-    {
-      title: 'Categorias',
-      url: '/categorias',
-      icon: 'list'
-    },
+    // {
+    //   title: 'Categorias',
+    //   url: '/categorias',
+    //   icon: 'list'
+    // },
     {
       title: 'Criar Conta',
       url: '/criar-conta',

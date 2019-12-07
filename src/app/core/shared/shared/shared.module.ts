@@ -4,10 +4,11 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PrecoComponent } from '../preco/preco.component';
+import { ListaEnderecoPage } from 'src/app/endereco/lista-endereco/lista-endereco.page';
 
 
 @NgModule({
-  declarations: [PrecoComponent],
+  declarations: [PrecoComponent, ListaEnderecoPage],
   imports: [
     CommonModule,
     IonicModule,
@@ -19,8 +20,9 @@ import { PrecoComponent } from '../preco/preco.component';
     IonicModule,
     RouterModule,
     ReactiveFormsModule,
-    PrecoComponent
+    PrecoComponent,
+    ListaEnderecoPage
   ],
-  entryComponents: []
+  entryComponents: [PrecoComponent, ListaEnderecoPage ]
 })
 export class SharedModule { }

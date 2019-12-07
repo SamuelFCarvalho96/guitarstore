@@ -13,10 +13,10 @@ import { FirebasePath } from '../core/shared/firebase-path';
 })
 export class TabViolaoPage implements OnInit {
   produtos: Observable<any[]>;
-  // categorias: Observable<any[]>;
-  // produtosService: any;
-  // categoriaSelecionada: Observable<any[]>;
-  // categoria: string = 'Violões';
+  categorias: Observable<any[]>;
+  produtosService: any;
+  categoriaSelecionada: Observable<any[]>;
+  categoria: string = 'Violões';
 
   constructor(private router: Router,
               private produtoService: ProdutosService,

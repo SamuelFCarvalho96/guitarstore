@@ -11,7 +11,7 @@
     <img [src]="produto.img"/>
   <h1>{{ produto.nome }}</h1>
   <pre text-wrap>{{ produto.descricao }}</pre>
-  <!-- <app-valor [valor]="produto.preco"></app-valor> -->
+  <app-preco [preco]="produto.preco"></app-preco>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
 

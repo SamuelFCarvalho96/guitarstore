@@ -59,9 +59,9 @@ const routes: Routes = [
   { path: 'form-pagamento',
     loadChildren: () => import ('./pedidos/form-pagamento/form-pagamento.module').then(m => m.FormPagamentoPageModule)
   },
-  { path: 'form-pagamento',
-    loadChildren: () => import ('./pedidos/form-pagamento/form-pagamento.module').then(m => m.FormPagamentoPageModule)
-  },
+  // { path: 'form-pagamento',
+  //   loadChildren: () => import ('./pedidos/form-pagamento/form-pagamento.module').then(m => m.FormPagamentoPageModule)
+  // },
   { path: 'lista-pedido',
     loadChildren: () => import ('./pedidos/lista-pedido/lista-pedido.module').then(m => m.ListaPedidoPageModule)
   },

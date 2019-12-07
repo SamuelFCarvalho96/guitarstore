@@ -15,11 +15,11 @@
       <!-- Inserir cor na Page na linha 14 dentro do ion-item -->
        
       <ion-label>Principais Ofertas</ion-label>
-      <!-- <ion-select (ionChange)="buscarProdutos()" [(ngModel)]="categoriaSelecionada"> -->
+      <ion-select (ionChange)="buscarProdutos()" [(ngModel)]="categoriaSelecionada">
         <ion-select-option value="" [selected]="true">Todas</ion-select-option>
         <ion-select-option *ngFor="let categoria of categorias | async" [value]="categoria.key">{{ categoria.nome }}
         </ion-select-option>
-      <!-- </ion-select> -->
+      </ion-select>
     </ion-item>
 
     <ion-item *ngFor="let produto of produtos | async" (click)="adicionarProduto(produto.key)" color="cinza">
